@@ -1,0 +1,112 @@
+	category	psmiles	compound	smiles	average size	water3	logkd
+204	PE	[*]C=C[*]	pentachlorobenzene (PeCB)	C1=C(C(=C(C(=C1Cl)Cl)Cl)Cl)Cl	132.5	1	4.381853025
+838	PP	[*]CC([*])C	MTBE	CC(C)(C)OC	4000	2	0.0
+220	PE	[*]C=C[*]	2,2′,4,4′,5,5′-hexachlorobiphenyl	C1=C(C(=CC(=C1Cl)Cl)Cl)C2=CC(=C(C=C2Cl)Cl)Cl 	95	1	7.04
+17	PE	[*]C=C[*]	PFHxDA	C(=O)(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O	9.5	1	2.533136288
+454	PE	[*]C=C[*]	2,4,4′,5-tetrachlorobiphenyl	C1=CC(=CC=C1C2=CC(=C(C=C2Cl)Cl)Cl)Cl	95	1	5.89
+426	PVC	[*]C=C[*]Cl	DDT	C1=CC(=CC=C1C(C2=CC=C(C=C2)Cl)C(Cl)(Cl)Cl)Cl	225	3	4.903089987
+134	PE	[*]C=C[*]	naproxen (NPX)	C[C@@H](C1=CC2=C(C=C1)C=C(C=C2)OC)C(=O)O	350	1	0.633468456
+74	PS	[*]C=C[*]c1ccccc1	PFHxA	C(=O)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)O	9.5	3	1.806179974
+852	PE	[*]C=C[*]	bisphenol A (BPA)	CC(C)(C1=CC=C(C=C1)O)C2=CC=C(C=C2)O	150	2	1.096910013
+758	PS	[*]C=C[*]c1ccccc1	pyrene	C1=CC2=C3C(=C1)C=CC4=CC=CC(=C43)C=C2	175	2	3.250420002
+831	PVC	[*]C=C[*]Cl	triadimefon	CC(C)(C)C(=O)C(N1C=NC=N1)OC2=CC=C(C=C2)Cl	112.5	2	2.176091259
+113	PS	[*]C=C[*]c1ccccc1	PFBS	C(C(C(F)(F)S(=O)(=O)O)(F)F)(C(F)(F)F)(F)F	9.5	3	2.147367108
+205	PE	[*]C=C[*]	pentachlorobenzene (PeCB)	C1=C(C(=C(C(=C1Cl)Cl)Cl)Cl)Cl	154.35	1	4.488116205
+399	PE	[*]C=C[*]	2,2',4,4'-tetrachlorobiphenyl	C1=CC(=C(C=C1Cl)Cl)C2=C(C=C(C=C2)Cl)Cl 	150	1	5.08
+821	PE	[*]C=C[*]	Cyclohexane	C1CCCCC1	150	1	3.23
+217	PE	[*]C=C[*]	PCB 153	C1=C(C(=CC(=C1Cl)Cl)Cl)C2=CC(=C(C=C2Cl)Cl)Cl	150	1	7.14
+565	PE	[*]C=C[*]	phenanthrene	C1=CC=C2C(=C1)C=CC3=CC=CC=C32	94	2	1.699837726
+834	PE	[*]C=C[*]	nadolol (NAD)	CC(C)(C)NCC(COC1=CC=CC2=C1C[C@@H]([C@@H](C2)O)O)O 	94	2	-0.698970004
+492	PS	[*]C=C[*]c1ccccc1	nitrobenzene	C1=CC=C(C=C1)[N+](=O)[O-]	170	2	1.579783597
+244	PE	[*]C=C[*]	1,3,5-trichlorobenzene (TeCB)	C1=C(C=C(C=C1Cl)Cl)Cl	154.35	1	4.366906483
+61	PE	[*]C=C[*]	PFOA	C(=O)(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O	9.5	3	1.80685803
+768	PP	[*]CC([*])C	Benzo[g,h,i]perylene	C1=CC2=C3C(=C1)C4=CC=CC5=C4C6=C(C=C5)C=CC(=C36)C=C2	150	3	6.69
+325	PS	[*]C=C[*]c1ccccc1	BDE-47	C1=CC(=C(C=C1Br)Br)OC2=C(C=C(C=C2)Br)Br	4000	2	2.710032699
+1024	PVC	[*]C=C[*]Cl	diethyl phthalate	CCOC(=O)C1=CC=CC=C1C(=O)OCC	150	1	0.78
+504	PE	[*]C=C[*]	Phenylalanine	C1=CC=C(C=C1)C[C@@H](C(=O)O)N	135	2	3.519
+697	PS	[*]C=C[*]c1ccccc1	naphthalene	C1=CC=C2C=CC=CC2=C1	10	2	3.781539969
+720	PS	[*]C=C[*]c1ccccc1	benzene	C1=CC=CC=C1	3500	2	1.008600172
+455	PE	[*]C=C[*]	2,4,4′,5-tetrachlorobiphenyl	C1=CC(=CC=C1C2=CC(=C(C=C2Cl)Cl)Cl)Cl	225	3	6.66
+53	PE	[*]C=C[*]	PFNA	C(=O)(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O	9.5	3	1.620136055
+472	PE	[*]C=C[*]	Diclofenac	C1=CC=C(C(=C1)CC(=O)O)NC2=C(C=CC=C2Cl)Cl	150	3	0.62
+360	PE	[*]C=C[*]	3,3′,4,4′-tetrachlorobiphenyl	C1=CC(=C(C=C1C2=CC(=C(C=C2)Cl)Cl)Cl)Cl  	95	1	6.62
+146	PA	[*]NCCCCCCCC(=O)[*]	17B-estradiol (E2)	C[C@]12CC[C@H]3[C@H]([C@@H]1CC[C@@H]2O)CCC4=C3C=CC(=C4)O	350	2	3.0
+1010	PP	[*]CC([*])C	norfloxacin (NOR)	CCN1C=C(C(=O)C2=CC(=C(C=C21)N3CCNCC3)F)C(=O)O	94	2	0.230448921
+523	PVC	[*]C=C[*]Cl	9-hydroxyphenanthrene	C1=CC=C2C(=C1)C=C(C3=CC=CC=C23)O  	150	1	4.96
+857	PS	[*]C=C[*]c1ccccc1	bisphenol A (BPA)	CC(C)(C1=CC=C(C=C1)O)C2=CC=C(C=C2)O	150	2	0.812913357
+498	PS	[*]C=C[*]c1ccccc1	nitrobenzene	C1=CC=C(C=C1)[N+](=O)[O-]	0.05	2	3.029992175
+259	PE	[*]C=C[*]	1,2,3-trichlorobenzene (TeCB)	C1=CC(=C(C(=C1)Cl)Cl)Cl 	132.5	1	3.944482672
+928	PVC	[*]C=C[*]Cl	sulfamethoxazole	CC1=CC(=NO1)NS(=O)(=O)C2=CC=C(C=C2)N	150	1	1.45
+466	PP	[*]CC([*])C	PCB 8	C1=CC=C(C(=C1)C2=CC=C(C=C2)Cl)Cl	150	3	4.98
+729	PVC	[*]C=C[*]Cl	3,6-CCZ	C1=CC2=C(C=C1Cl)C3=C(N2)C=CC(=C3)Cl  	150	3	2.184691431
+942	PE	[*]C=C[*]	p-Xylene	CC1=CC=C(C=C1)C	150	1	2.44
+1062	PP	[*]CC([*])C	fenbendazole (FEN)	COC(=O)NC1=NC2=C(N1)C=C(C=C2)SC3=CC=CC=C3	94	2	-0.522878745
+1073	PP	[*]CC([*])C	benzophenone-3	COC1=CC(=C(C=C1)C(=O)C2=CC=CC=C2)O	250	2	2.324488233
+1066	PE	[*]C=C[*]	carbendazim (CAR)	COC(=O)NC1=NC2=CC=CC=C2N1	5000	2	0.113943352
+500	PVC	[*]C=C[*]Cl	nitrobenzene	C1=CC=C(C=C1)[N+](=O)[O-]	2	2	2.830010936
+863	PP	[*]CC([*])C	Ibuprofen	CC(C)CC1=CC=C(C=C1)C(C)C(=O)O	150	3	0.39
+883	PE	[*]C=C[*]	propranolol (PRO)	CC(C)NCC(COC1=CC=CC2=CC=CC=C21)O	46.5	2	3.361727836
+611	PE	[*]C=C[*]	phenanthrene	C1=CC=C2C(=C1)C=CC3=CC=CC=C32	2628	3	4.193124598
+657	PP	[*]CC([*])C	Fluoranthene	C1=CC=C2C(=C1)C3=CC=CC4=C3C2=CC=C4	257.5	3	4.79
+98	PVC	[*]C=C[*]Cl	FOSA	C(C(C(C(C(F)(F)S(=O)(=O)N)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)(F)F	230	2	2.063333359
+1094	PE	[*]C=C[*]	trimethoprim (TMP)	COC1=CC(=CC(=C1OC)OC)CC2=CN=C(N=C2N)N	149.1	3	0.812913357
+34	PS	[*]C=C[*]c1ccccc1	PFTrA	C(=O)(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O  	9.5	3	3.627427309
+677	PE	[*]C=C[*]	naphthalene	C1=CC=C2C=CC=CC2=C1	219	1	4.00588374
+336	PP	[*]CC([*])C	PCB 66	C1=CC(=C(C=C1C2=C(C=C(C=C2)Cl)Cl)Cl)Cl	150	3	5.26
+94	PS	[*]C=C[*]c1ccccc1	Perfluoro-1-octanesulfonyl  fluoride	C(C(C(C(C(F)(F)S(=O)(=O)F)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)(F)F 	221.5	3	2.792
+431	PE	[*]C=C[*]	p,p’-DDD	C1=CC(=CC=C1C(C2=CC=C(C=C2)Cl)C(Cl)Cl)Cl	135	2	4.89
+471	PS	[*]C=C[*]c1ccccc1	diclofenac	C1=CC=C(C(=C1)CC(=O)O)NC2=C(C=CC=C2Cl)Cl	175	2	0.931457871
+531	PS	[*]C=C[*]c1ccccc1	1-nitronaphthalene (1-Mnap)	C1=CC=C2C(=C1)C=CC=C2[N+](=O)[O-]	150	2	2.125481266
+868	PP	[*]CC([*])C	ibuprofen (IBU)	CC(C)CC1=CC=C(C=C1)C(C)C(=O)O	1000	1	0.397940009
+941	PE	[*]C=C[*]	4-nitrotoluene	CC1=CC=C(C=C1)[N+](=O)[O-]	280	2	2.588831726
+985	PE	[*]C=C[*]	Dioctyl phthalate	CCCCCCCCOC(=O)C1=CC=CC=C1C(=O)OCCCCCCCC	225	3	4.993
+610	PE	[*]C=C[*]	phenanthrene	C1=CC=C2C(=C1)C=CC3=CC=CC=C32	400	3	4.149219113
+141	PE	[*]C=C[*]	naproxen (NPX)	C[C@@H](C1=CC2=C(C=C1)C=C(C=C2)OC)C(=O)O	10	3	0.204119983
+739	PE	[*]C=C[*]	pyrene	C1=CC2=C3C(=C1)C=CC4=CC=CC(=C43)C=C2	150	1	4.7
+130	PE	[*]C=C[*]	Naproxen	C[C@@H](C1=CC2=C(C=C1)C=C(C=C2)OC)C(=O)O	150	1	0.68
+3	PE	[*]C=C[*]	4,4'-DDT	[13CH]1=[13CH][13C](=[13CH][13CH]=[13C]1C([13C]2=[13CH][13CH]=[13C]([13CH]=[13CH]2)Cl)C(Cl)(Cl)Cl)Cl 	225	3	4.954242509
+804	PE	[*]C=C[*]	ciprofloxacin	C1CC1N2C=C(C(=O)C3=CC(=C(C=C32)N4CCNCC4)F)C(=O)O	150	1	1.76
+861	PE	[*]C=C[*]	Ibuprofen	CC(C)CC1=CC=C(C=C1)C(C)C(=O)O	150	1	1.22
+866	PE	[*]C=C[*]	ibuprofen (IBU)	CC(C)CC1=CC=C(C=C1)C(C)C(=O)O	10	1	1.146128036
+1078	PS	[*]C=C[*]c1ccccc1	benzophenone-3	COC1=CC(=C(C=C1)C(=O)C2=CC=CC=C2)O	5	2	2.729488769
+851	PE	[*]C=C[*]	bisphenol A (BPA)	CC(C)(C1=CC=C(C=C1)O)C2=CC=C(C=C2)O	150	2	0.77815125
+412	PE	[*]C=C[*]	1,3-dinitrobenzene	C1=CC(=CC(=C1)[N+](=O)[O-])[N+](=O)[O-]	150	1	1.86
+807	PE	[*]C=C[*]	ciprofloxacin (CIP)	C1CC1N2C=C(C(=O)C3=CC(=C(C=C32)N4CCNCC4)F)C(=O)O	94	2	-0.15490196
+1016	PP	[*]CC([*])C	enrofloxacin (ENR)	CCN1CCN(CC1)C2=C(C=C3C(=C2)N(C=C(C3=O)C(=O)O)C4CC4)F	94	2	0.113943352
+99	PS	[*]C=C[*]c1ccccc1	FOSA	C(C(C(C(C(F)(F)S(=O)(=O)N)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)(F)F	9.5	3	2.66238002
+983	PE	[*]C=C[*]	1-Octene	CCCCCCC=C	150	1	3.04
+681	PET	[*]OCCOC(=O)c1ccc(C([*])=O)cc1	naphthalene	C1=CC=C2C=CC=CC2=C1	3000	1	3.938729817
+754	PVC	[*]C=C[*]Cl	pyrene	C1=CC2=C3C(=C1)C=CC4=CC=CC(=C43)C=C2	125	1	2.079181246
+1099	PE	[*]C=C[*]	Dipterex	COP(=O)(C(C(Cl)(Cl)Cl)O)OC	150	1	0.42
+422	PE	[*]C=C[*]	DDT	C1=CC(=CC=C1C(C2=CC=C(C=C2)Cl)C(Cl)(Cl)Cl)Cl	225	3	4.954242509
+125	PE	[*]C=C[*]	tetracycline (TC)	C[C@@]1([C@H]2C[C@H]3[C@@H](C(=O)C(=C([C@]3(C(=O)C2=C(C4=C1C=CC=C4O)O)O)O)C(=O)N)N(C)C)O	48	2	2.096910013
+853	PE	[*]C=C[*]	bisphenol A (BPA)	CC(C)(C1=CC=C(C=C1)O)C2=CC=C(C=C2)O	54.4	2	1.681241237
+1058	PP	[*]CC([*])C	flubendazole (FLU)	COC(=O)NC1=NC2=C(N1)C=C(C=C2)C(=O)C3=CC=C(C=C3)F	94	2	0.113943352
+314	PA	[*]NCCCCCCCC(=O)[*]	BDE-47	C1=CC(=C(C=C1Br)Br)OC2=C(C=C(C=C2)Br)Br	4000	2	2.620031895
+306	PE	[*]C=C[*]	1,2,3,4-tetrachlorobenzene	C1=CC(=C(C(=C1Cl)Cl)Cl)Cl	280	2	3.887110703
+771	PVC	[*]C=C[*]Cl	1,8,9-trihydroxyanthracene (TOHA)	C1=CC2=CC3=C(C(=CC=C3)O)C(=C2C(=C1)O)O	140	2	0.954242509
+168	PE	[*]C=C[*]	hexachlorobenzene	C1(=C(C(=C(C(=C1Cl)Cl)Cl)Cl)Cl)Cl	150	3	5.22
+326	PE	[*]C=C[*]	2,3,3′,4,4′-pentachlorobiphenyl	C1=CC(=C(C=C1C2=C(C(=C(C=C2)Cl)Cl)Cl)Cl)Cl	95	1	6.35
+189	PE	[*]C=C[*]	gamma-Hexachlorocyclohexane	C1(C(C(C(C(C1Cl)Cl)Cl)Cl)Cl)Cl	225	3	2.33
+432	PE	[*]C=C[*]	PCB 28	C1=CC(=CC=C1C2=C(C=C(C=C2)Cl)Cl)Cl	150	1	5.31
+855	PET	[*]OCCOC(=O)c1ccc(C([*])=O)cc1	bisphenol A (BPA)	CC(C)(C1=CC=C(C=C1)O)C2=CC=C(C=C2)O	150	2	0.707570176
+712	PE	[*]C=C[*]	benzo[a]pyrene	C1=CC=C2C3=C4C(=CC2=C1)C=CC5=C4C(=CC=C5)C=C3	150	3	7.17
+724	PE	[*]C=C[*]	2,7-BCZ	C1=CC2=C(C=C1Br)NC3=C2C=CC(=C3)Br	150	3	2.041392685
+445	PE	[*]C=C[*]	PCB-31	C1=CC(=CC=C1C2=C(C=CC(=C2)Cl)Cl)Cl	100	3	6.050000018
+540	PVC	[*]C=C[*]Cl	4-hydroxyphenanthrene	C1=CC=C2C(=C1)C=CC3=C2C(=CC=C3)O	150	1	4.84
+228	PE	[*]C=C[*]	PCB 169	C1=C(C=C(C(=C1Cl)Cl)Cl)C2=CC(=C(C(=C2)Cl)Cl)Cl	150	1	7.77
+526	PS	[*]C=C[*]c1ccccc1	9-nitroanthracene	C1=CC=C2C(=C1)C=C3C=CC=CC3=C2[N+](=O)[O-]	125	2	4.394626764
+40	PS	[*]C=C[*]c1ccccc1	Perfluoroundecanoic acid	C(=O)(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O	10	3	2.75
+489	PE	[*]C=C[*]	nitrobenzene	C1=CC=C(C=C1)[N+](=O)[O-]	50	2	2.030194785
+24	PS	[*]C=C[*]c1ccccc1	PFTeA	C(=O)(C(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O	9.5	1	3.248880166
+164	PVC	[*]C=C[*]Cl	oestrone (E1)	C[C@]12CC[C@H]3[C@H]([C@@H]1CCC2=O)CCC4=C3C=CC(=C4)O	124.2	2	2.758003009
+998	PE	[*]C=C[*]	trifluralin (TFL)	CCCN(CCC)C1=C(C=C(C=C1[N+](=O)[O-])C(F)(F)F)[N+](=O)[O-]	301	1	4.831595295
+418	PE	[*]C=C[*]	p,p’-DDMU	C1=CC(=CC=C1C(=CCl)C2=CC=C(C=C2)Cl)Cl	135	2	5.37
+779	PE	[*]C=C[*]	Sulfadiazine	C1=CN=C(N=C1)NS(=O)(=O)C2=CC=C(C=C2)N	225	3	0.797
+109	PS	[*]C=C[*]c1ccccc1	PFHxS	C(C(C(C(F)(F)S(=O)(=O)O)(F)F)(F)F)(C(C(F)(F)F)(F)F)(F)F	9.5	1	1.432969291
+58	PE	[*]C=C[*]	perfluorooctanoic acid	C(=O)(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O	150	3	2.7
+1032	PE	[*]C=C[*]	Malathion	CCOC(=O)CC(C(=O)OCC)SP(=S)(OC)OC	150	1	1.82
+900	PA	[*]NCCCCCCCC(=O)[*]	amoxicillin (AMX)	CC1([C@@H](N2[C@H](S1)[C@@H](C2=O)NC(=O)[C@@H](C3=CC=C(C=C3)O)N)C(=O)O)C	134.2	2	2.878521796
+123	PE	[*]C=C[*]	tetracycline (TC)	C[C@@]1([C@H]2C[C@H]3[C@@H](C(=O)C(=C([C@]3(C(=O)C2=C(C4=C1C=CC=C4O)O)O)O)C(=O)N)N(C)C)O	590	2	2.029383778
+224	PE	[*]C=C[*]	2,2′,4,4′,5,5′-hexachlorobiphenyl	C1=C(C(=CC(=C1Cl)Cl)Cl)C2=CC(=C(C=C2Cl)Cl)Cl 	225	3	7.65
+800	PP	[*]CC([*])C	fluorene	C1C2=CC=CC=C2C3=CC=CC=C31	3000	1	3.635302753

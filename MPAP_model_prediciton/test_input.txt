@@ -1,0 +1,2 @@
+category	psmiles	compound	smiles	average size	water3	logkd	poly_smiles
+PA	[*]NCCCCCCCC(=O)[*]	PFOSF	C(C(C(C(C(F)(F)S(=O)(=O)F)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)(F)F	10	1	1	NCCCCCCCC(=O)
