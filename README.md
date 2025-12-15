@@ -41,10 +41,14 @@ conda activate kd
 pip install -r requirements.txt
 ```
 
-**Note:** If you get an error that the environment "kd" cannot be found:
-- Check if the environment was created: `conda info --envs`
-- If it doesn't appear, try creating it again: `conda env create -f environment.yaml -n kd`
-- Or activate using the full path if it exists in a different location
+**Note:** 
+- The `environment.yaml` file is cross-platform compatible (Windows, macOS, Linux)
+- If you encounter package conflicts, you can use pip instead: `pip install -r requirements.txt`
+- For CUDA support, you may need to install PyTorch separately:
+  ```bash
+  # For CUDA 11.8 (check your CUDA version)
+  conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+  ```
 
 3. **Install the package in development mode:**
 ```bash
