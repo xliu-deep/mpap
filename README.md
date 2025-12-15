@@ -32,11 +32,19 @@ cd github
 ```bash
 # Using conda (recommended)
 conda env create -f environment.yaml
+# Verify the environment was created
+conda info --envs
+# Activate the environment
 conda activate kd
 
 # Or using pip
 pip install -r requirements.txt
 ```
+
+**Note:** If you get an error that the environment "kd" cannot be found:
+- Check if the environment was created: `conda info --envs`
+- If it doesn't appear, try creating it again: `conda env create -f environment.yaml -n kd`
+- Or activate using the full path if it exists in a different location
 
 3. **Install the package in development mode:**
 ```bash
