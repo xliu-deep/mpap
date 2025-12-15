@@ -339,20 +339,31 @@ Model performance metrics:
 - **MAE**: Mean Absolute Error
 - **RMSE**: Root Mean Squared Error
 
-## **Step 1: Convert  text to npy input file using MPAP predata.**
+## Workflow
 
-Contributions are welcome! Please follow these guidelines:
+### Step 1: Convert text to npy input file using MPAP predata
 
-1. Follow PEP 8 style guidelines
-2. Add type hints to all functions
-3. Include docstrings for all classes and functions
-4. Write tests for new features
-5. Update documentation as needed
+Preprocess your data from text format to numpy arrays:
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
+```bash
+python MPAP_predata/predata.py --input your_data.txt --output output_directory/
+```
 
+### Step 2: Train the model
 
-## **Step 2: predict kd**   
+Train the model with your preprocessed data:
+
+```bash
+python MPAP_model_training/training.py
+```
+
+### Step 3: Predict Kd values
+
+Use the trained model to make predictions:
+
+```bash
+python MPAP_model_prediciton/prediction.py
+```
 
 ## Contact
 
