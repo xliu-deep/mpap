@@ -1,0 +1,54 @@
+# MPAP Model Configuration
+
+# Paths (use environment variables or relative paths)
+paths:
+  data_dir: "./MPAP_dataset"
+  train_input_dir: "./MPAP_model_training/train_input"
+  valid_input_dir: "./MPAP_model_training/valid_input"
+  test_input_dir: "./MPAP_model_training/test_input"
+  model_dir: "./MPAP_model_training/models"
+  output_dir: "./outputs"
+  predata_input: "./MPAP_dataset/test.txt"
+  predata_output: "./MPAP_predata/output"
+
+# Model hyperparameters
+model:
+  dim: 75
+  layer_gnn: 3
+  layer_cnn: 3
+  layer_output: 2
+  window: 15  # (2 * side + 1) where side = 7
+  window2: 9  # (2 * side2 + 1) where side2 = 4
+  dropout: 0.01180129237722248
+
+# Training hyperparameters
+training:
+  max_epochs: 200
+  batch_size: 128
+  learning_rate: 0.000687470637077872
+  weight_decay: 0.00374695039678227
+  lr_min: 1e-5
+  lr_decay: 0.5
+  decay_interval: 6
+  early_stopping_patience: 15
+  seed: 1234
+
+# Device configuration
+device:
+  cuda_device: null  # null for auto, or specify device ID (0, 1, etc.)
+  num_threads: 5
+
+# Data processing
+data:
+  radius: 2
+  ngram: 3
+  max_atom_len: 64
+  morgan_fp_size: 2048
+  fingerprint_size: 600
+
+# Logging
+logging:
+  level: "INFO"
+  log_dir: "./logs"
+  log_file: "mpap.log"
+

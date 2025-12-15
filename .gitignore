@@ -1,0 +1,79 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Logs
+logs/
+*.log
+
+# Data files - DO NOT UPLOAD (too large)
+*.npy
+*.pkl
+*.pickle
+*.xls
+*.xlsx
+
+# Model checkpoints - DO NOT UPLOAD (too large)
+models/
+best-model/
+*.tar
+*.pth
+*.pt
+
+# Backup files - DO NOT UPLOAD
+*_backup.py
+*_original_backup.py
+predication.py  # Old version, replaced by prediction.py
+
+# Outputs - DO NOT UPLOAD (generated files)
+outputs/
+results/
+test_preds.txt
+test_input.txt
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+
+# Config overrides (optional - keep default config.yaml)
+# config/local_config.yaml
+

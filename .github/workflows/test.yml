@@ -1,0 +1,23 @@
+name: Tests
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+        pip install -e .
+    - name: Test imports
+      run: |
+        python -c "from mpap.config import Config; print('Config OK')"
+        python -m py_compile MPAP_model_training/training.py
+        python -m py_compile MPAP_model_prediction/prediction.py
+        python -m py_compile MPAP_predata/predata.py
