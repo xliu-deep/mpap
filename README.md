@@ -77,9 +77,9 @@ python MPAP_predata/predata.py --input your_data.txt --output output_directory/
 **Input file format**: Tab-separated text file with columns:
 - `category`: Type of microplastic (examples: PE, PS, PVC, PP, PET, PA)
 - `psmiles`: SMILES of microplastic (examples: `[*]C=C[*]`, `[*]C=C[*]c1ccccc1`, `[*]C=C[*]Cl`, `[*]CC([*])C`, `[*]OCCOC(=O)c1ccc(C([*])=O)cc1`, `[*]NCCCCCCCC(=O)[*]`)
-- `compound`: Name of pollutant (examples: `biphenyl (BIP)`, `phenanthrene`, `BDE-47`, `PCB-77`, `naproxen (NPX)`, `triclosan (TCS)`, `Atrazine`, `bisphenol A (BPA)`)
-- `smiles`: SMILES of pollutant (examples: `C1=CC=C(C=C1)C2=CC=CC=C2`, `C1=CC=C2C(=C1)C=CC3=CC=CC=C32`, `C1=CC(=C(C=C1Br)Br)OC2=C(C=C(C=C2)Br)Br`, `CCNC1=NC(=NC(=N1)Cl)NC(C)C`)
-- `average size`: Particle size in micrometers (examples: `150`, `261`, `4000`, `637.5`, `100`, `219`, `9.5`, `0.8`)
+- `compound`: Name of pollutant (examples: `biphenyl (BIP)`, `Atrazine`)
+- `smiles`: SMILES of pollutant (examples: `C1=CC=C(C=C1)C2=CC=CC=C2`, `CCNC1=NC(=NC(=N1)Cl)NC(C)C`)
+- `average size`: Particle size in micrometers (examples: `150`, `261`)
 - `water3`: Water type (1=freshwater, 2=ultrapure, 3=seawater)
 - `logkd`: Actual Kd value 
 - `poly_smiles`: SMILES of polymer
