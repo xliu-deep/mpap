@@ -4,6 +4,8 @@ A deep learning model for predicting adsorption coefficients (Kd) between microp
 
 ## Overview
 
+![MPAP Model Workflow](f1.jpg)
+
 This project implements a multimodal Siamese neural network (MPAP) that predicts the adsorption coefficient (Kd) between microplastics and organic pollutants. The model integrates:
 
 - **Molecular fingerprints**: ECFPs for pollutants and PolyBERT for microplastics
@@ -133,31 +135,6 @@ Predictions will be saved to:
 
 All hyperparameters and paths are configured in `config/config.yaml`. Key settings include:
 
-### Model Parameters
-```yaml
-model:
-  dim: 75                    # Feature dimension
-  layer_gnn: 3               # Number of GNN layers
-  layer_cnn: 3               # Number of CNN layers
-  dropout: 0.012             # Dropout rate
-```
-
-### Training Parameters
-```yaml
-training:
-  max_epochs: 200            # Maximum training epochs
-  batch_size: 128            # Batch size
-  learning_rate: 0.0007      # Learning rate
-  early_stopping_patience: 15 # Early stopping patience
-  seed: 1234                 # Random seed
-```
-
-### Device Configuration
-```yaml
-device:
-  cuda_device: null          # null for auto, or specify device ID
-  num_threads: 5             # Number of CPU threads
-```
 
 ### Paths
 ```yaml
