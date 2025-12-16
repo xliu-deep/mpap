@@ -85,7 +85,7 @@ def process_data(input_file: str, output_dir: str, config: Config):
     data = pd.read_csv(input_file, sep='\t')
     
     psmiles = data['psmiles']
-    poly_smiles = data['poly_smiles']
+    # poly_smiles = data['poly_smiles']
     compound_smiles = data['smiles']
     labels = data['logkd'].to_list()
     sizes = data['average size'].to_list()
@@ -100,22 +100,22 @@ def process_data(input_file: str, output_dir: str, config: Config):
     
     logger.info(f"Processing {len(psmiles)} samples...")
     
-    # Process microplastic fingerprints
-    for i, psmile in enumerate(psmiles):
-        if i % 100 == 0:
-            logger.info(f"Processing microplastics: {i}/{len(psmiles)}")
+    # # Process microplastic fingerprints
+    # for i, psmile in enumerate(psmiles):
+    #     if i % 100 == 0:
+    #         logger.info(f"Processing microplastics: {i}/{len(psmiles)}")
         
-        finger = getprints(psmile)  # Use existing getprints function
-        if finger is None:
-            logger.warning(f"Could not generate fingerprint for psmiles: {psmile}")
-            # Use zero vector as fallback
-            finger = np.zeros(600)
-        fingerprints.append(finger)
+    #     finger = getprints(psmile)  # Use existing getprints function
+    #     if finger is None:
+    #         logger.warning(f"Could not generate fingerprint for psmiles: {psmile}")
+    #         # Use zero vector as fallback
+    #         finger = np.zeros(600)
+    #     fingerprints.append(finger)
     
     # Process polymer graphs
-    for i, polysmile in enumerate(poly_smiles):
+    for i, polysmile in enumerate(psmiles):
         if i % 100 == 0:
-            logger.info(f"Processing polymer graphs: {i}/{len(poly_smiles)}")
+            logger.info(f"Processing polymer graphs: {i}/{len(psmiles)}")
         
         try:
             p_atomfeatures, p_adj = smile_to_graph(polysmile)

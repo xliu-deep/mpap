@@ -6,8 +6,15 @@ import sys
 import os
 from pathlib import Path
 
-# Add parent directory to path to import mpap package
-sys.path.insert(0, str(Path(__file__).parent.parent))
+# Get the project root directory (parent of MPAP_model_training)
+_project_root = Path(__file__).parent.parent.resolve()
+
+# Add project root to path to import mpap package
+if str(_project_root) not in sys.path:
+    sys.path.insert(0, str(_project_root))
+
+# Change to project root directory so relative paths in config work correctly
+os.chdir(_project_root)
 
 import numpy as np
 import torch
@@ -115,10 +122,12 @@ def get_metrics(model, dataset_test, batch_size, device):
     # Calculate metrics
     avg_loss = np.mean(np.array(valid_loss).flatten())
     avg_mae_loss = np.mean(np.array(valid_mae_loss).flatten())
-    r2 = r2_score(
+    r2_value = r2_score(
         torch.tensor(valid_outputs, device=device).float(),
         torch.tensor(valid_labels, device=device).float()
     )
+    # Extract scalar value from tensor
+    r2 = r2_value.item() if isinstance(r2_value, torch.Tensor) else float(r2_value)
     
     return avg_loss, avg_mae_loss, r2, valid_outputs, valid_labels
 
@@ -294,7 +303,7 @@ def train(config: Config):
             best_val_loss = val_loss
             consecutive_no_improve = 0
             
-            model_path = os.path.join(model_dir, f"best_model_{best_val_loss:.6f}.tar")
+            model_path = os.path.join(model_dir, f"{best_val_loss:.6f}.tar")
             torch.save(model.state_dict(), model_path)
             logger.info(f"Saved best model: {model_path}")
         else:

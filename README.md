@@ -118,7 +118,6 @@ Predictions will be saved to:
 - `outputs/predictions.csv`: Predictions and labels
 - `outputs/metrics.txt`: Performance metrics (MSE, MAE, R²)
 
-## Configuration
 
 All hyperparameters and paths are configured in `config/config.yaml`. Key settings include:
 
@@ -298,7 +297,6 @@ The MPAP model consists of:
 - **Predictions**: `outputs/predictions.csv` (labels and predictions)
 - **Metrics**: `outputs/metrics.txt` (MSE, MAE, R²)
 
-## Troubleshooting
 
 ### Import Errors
 If you get import errors:

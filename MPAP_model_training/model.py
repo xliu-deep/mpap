@@ -324,7 +324,7 @@ class one_hot(nn.Module):
 
 
 class Predictor(nn.Module):
-    def __init__(self, ResMLP, Affine, dim, window, window2, layer_gnn, layer_cnn, layer_output):
+    def __init__(self, ResMLP, Affine, dim, window, window2, layer_gnn, layer_cnn, layer_output, dropout):
         super(Predictor, self).__init__()
         # self.embed_fingerprint = nn.Embedding(34, dim)
         self.embed_comg = nn.Embedding(16, 44)
@@ -336,7 +336,10 @@ class Predictor(nn.Module):
         self.W_gnn = nn.ModuleList([nn.Linear(dim, dim), nn.Linear(dim, dim), nn.Linear(dim, dim)])
         self.W_gat = nn.Parameter(torch.ones(50, 50))
 
-        self.dropout=dropout
+        # Store dropout probability for creating other dropout layers
+        self.dropout_p = dropout
+        # Create dropout layer for use in forward method
+        self.dropout = nn.Dropout(p=dropout)
 
 
         self.WC_struc1 = ResMLP(Affine, 64, 75, 75, 0)
@@ -401,7 +404,7 @@ class Predictor(nn.Module):
         self.W_out2_2 = nn.Linear(128, 128)
         self.W_out2_3 = nn.Linear(128, 128)
 
-        self.dropout1 = nn.Dropout(p=self.dropout)
+        self.dropout1 = nn.Dropout(p=self.dropout_p)
         self.dropout2 = nn.Dropout(p=0.2)
         self.dropout1_1 = nn.Dropout(p=0.2)
         self.dropout1_2 = nn.Dropout(p=0.4)
@@ -938,34 +941,35 @@ mae_loss_fn = torch.nn.L1Loss()
 smoothl1_loss_fn=torch.nn.SmoothL1Loss()
 r2_score=R2Score().to(device)
 
-DATASET = "D:/microplastics/model/polyDTA"
-radius = 2
-ngram = 3
-dim = 75
-layer_gnn = 3
-side = 7
-side2 = 4
-window = (2 * side + 1)
-window2 = (2 * side2 + 1)
-layer_cnn = 3
-layer_output = 2
-lr = 0.000687470637077872
-lr_min = 1e-5
-lr_decay = 0.5
-decay_interval = 6
-weight_decay = 0.00374695039678227
-iteration = 380
-batch=128
-'''
-data input preparation
-'''
+# # Default values (overridden by config in training.py)
+# DATASET = "D:/microplastics/model/polyDTA"  # Legacy, not used
+# radius = 2
+# ngram = 3
+# dim = 75
+# layer_gnn = 3
+# side = 7
+# side2 = 4
+# window = (2 * side + 1)
+# window2 = (2 * side2 + 1)
+# layer_cnn = 3
+# layer_output = 2
+# lr = 0.000687470637077872
+# lr_min = 1e-5
+# lr_decay = 0.5
+# decay_interval = 6
+# weight_decay = 0.00374695039678227
+# iteration = 380
+# batch=128
+# # '''
+# data input preparation
+# NOTE: Dataset loading is now handled by training.py using config paths.
+# The code below is commented out to prevent execution at import time.
+# '''
 
-dir_input1 = 'D:/microplastics/model/polyDTA/train_input/'
-dir_input2 = 'D:/microplastics/model/polyDTA/valid_input/'
-
-dataset_train, dataset_test,label = dataset(dir_input1, dir_input2)
-
-print(dataset_train[0][3].shape[1])
+# dir_input1 = 'D:/microplastics/model/polyDTA/train_input/'
+# dir_input2 = 'D:/microplastics/model/polyDTA/valid_input/'
+# dataset_train, dataset_test,label = dataset(dir_input1, dir_input2)
+# print(dataset_train[0][3].shape[1])  # Commented out - dataset loading handled by training.py
 
 
 
@@ -1087,7 +1091,8 @@ def train(max_epochs, model, optimizer, scheduler, dataset_train, dataset_test):
             now_r2=r2
             best_outputs=outputs
             print("Epoch: " + str(epoch + 1) + "  train_loss " + str(np.mean(np.array(running_loss))) + " Val_loss " + str(val_loss) + " MAE Val_loss " + str(mae_loss)+'Val_R2'+str(r2))
-            torch.save(model.state_dict(), "D:/microplastics/best_model/"+str(best_val_loss)+".tar")
+            # Model saving is now handled by training.py using config paths
+            # torch.save(model.state_dict(), "D:/microplastics/best_model/"+str(best_val_loss)+".tar")
 
         else:
             consecutiveepoch_num+=1
@@ -1109,4 +1114,5 @@ def main(max_epochs,dataset_train,dataset_test,dropout):
 
     train(max_epochs,model,optimizer,scheduler,dataset_train,dataset_test)
 
-main(100,dataset_train,dataset_test)
+# Main execution is now handled by training.py
+# main(100,dataset_train,dataset_test)

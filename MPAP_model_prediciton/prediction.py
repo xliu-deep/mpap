@@ -6,8 +6,15 @@ import sys
 import os
 from pathlib import Path
 
-# Add parent directory to path to import mpap package
-sys.path.insert(0, str(Path(__file__).parent.parent))
+# Get the project root directory (parent of MPAP_model_prediciton)
+_project_root = Path(__file__).parent.parent.resolve()
+
+# Add project root to path to import mpap package
+if str(_project_root) not in sys.path:
+    sys.path.insert(0, str(_project_root))
+
+# Change to project root directory so relative paths in config work correctly
+os.chdir(_project_root)
 
 import numpy as np
 import torch
@@ -127,6 +134,66 @@ def predict(model, dataset_test, batch_size, device):
     return predictions, labels, metrics
 
 
+def find_best_model(model_dir: str) -> str:
+    """
+    Find the best model by traversing the model directory and selecting
+    the one with the smallest validation loss (based on filename).
+    
+    Models are saved with pattern: best_model_{validation_loss:.6f}.tar
+    
+    Args:
+        model_dir: Directory containing saved models
+        
+    Returns:
+        Path to the best model file
+        
+    Raises:
+        FileNotFoundError: If no model files are found
+    """
+    import re
+    import glob
+    
+    if not os.path.exists(model_dir):
+        raise FileNotFoundError(f"Model directory not found: {model_dir}")
+    
+    # Find all .tar files matching the pattern best_model_*.tar
+    pattern = os.path.join(model_dir, 'best_model_*.tar')
+    model_files = glob.glob(pattern)
+    
+    if not model_files:
+        # Try alternative pattern or subdirectories
+        pattern = os.path.join(model_dir, '**', '*.tar')
+        model_files = glob.glob(pattern, recursive=True)
+    
+    if not model_files:
+        raise FileNotFoundError(f"No model files found in {model_dir}")
+    
+    # Extract validation loss from filenames
+    model_losses = []
+    for model_file in model_files:
+        # Extract loss from filename: best_model_0.475353.tar -> 0.475353
+        filename = os.path.basename(model_file)
+        match = re.search(r'best_model_([\d.]+)\.tar', filename)
+        if match:
+            try:
+                loss = float(match.group(1))
+                model_losses.append((loss, model_file))
+            except ValueError:
+                logger.warning(f"Could not parse loss from filename: {filename}")
+                continue
+    
+    if not model_losses:
+        raise FileNotFoundError(
+            f"No valid model files found matching pattern 'best_model_*.tar' in {model_dir}"
+        )
+    
+    # Find model with smallest validation loss
+    best_loss, best_model_path = min(model_losses, key=lambda x: x[0])
+    logger.info(f"Found {len(model_losses)} model(s), best model: {os.path.basename(best_model_path)} (loss: {best_loss:.6f})")
+    
+    return best_model_path
+
+
 def load_model(model_path: str, config: Config, device: torch.device):
     """
     Load trained model from checkpoint.
@@ -181,14 +248,20 @@ def main():
     logger.info(f"Using device: {device}")
     
     # Load model
-    # Default to best-model if not specified
     model_dir = config.get('paths.model_dir')
-    model_file = os.path.join(model_dir, 'best-model', '0.47535303.tar')
     
-    # Allow override via environment variable
-    model_path = os.getenv('MPAP_MODEL_PATH', model_file)
+    # Allow override via environment variable, otherwise find best model automatically
+    model_path = os.getenv('MPAP_MODEL_PATH', None)
+    if model_path is None:
+        logger.info(f"Searching for best model in {model_dir}...")
+        model_path = find_best_model(model_dir)
+    else:
+        logger.info(f"Using model specified by MPAP_MODEL_PATH: {model_path}")
+    
     if not os.path.exists(model_path):
         raise FileNotFoundError(f"Model file not found: {model_path}")
+    
+    logger.info(f"Loading model from: {model_path}")
     
     model = load_model(model_path, config, device)
     
