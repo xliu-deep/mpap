@@ -216,54 +216,7 @@ python MPAP_model_training/training.py
 └── README.md                 # This file
 ```
 
-## Usage Examples
 
-### Using the Python API
-
-```python
-from mpap.config import Config
-from mpap.utils import setup_logging, get_device
-from mpap.data_loader import load_dataset
-
-# Load configuration
-config = Config()
-
-# Setup logging
-setup_logging(
-    log_dir=config.get('logging.log_dir'),
-    level=config.get('logging.level')
-)
-
-# Get device
-device = get_device(config.get('device.cuda_device'))
-
-# Load dataset
-train_data = load_dataset(
-    config.get('paths.train_input_dir'),
-    device=device
-)
-```
-
-### Custom Configuration
-
-Create a custom config file:
-
-```yaml
-# custom_config.yaml
-model:
-  dim: 100
-  dropout: 0.05
-
-training:
-  batch_size: 64
-  learning_rate: 0.001
-```
-
-Then use it:
-
-```bash
-MPAP_CONFIG=custom_config.yaml python MPAP_model_training/training.py
-```
 
 ## Data Format
 
@@ -309,38 +262,6 @@ The MPAP model consists of:
 - **Predictions**: `outputs/predictions.csv` (labels and predictions)
 - **Metrics**: `outputs/metrics.txt` (MSE, MAE, R²)
 
-
-### Import Errors
-If you get import errors:
-```bash
-pip install -e .
-```
-
-### Config Not Found
-Default config is at `config/config.yaml`. Override with:
-```bash
-MPAP_CONFIG=/path/to/config.yaml python script.py
-```
-
-### Model Not Found
-For prediction, set model path:
-```bash
-MPAP_MODEL_PATH=./MPAP_model_prediction/best-model/0.47535303.tar python MPAP_model_prediction/prediction.py
-```
-
-### CUDA Out of Memory
-Reduce batch size in `config/config.yaml`:
-```yaml
-training:
-  batch_size: 64  # Reduce from 128
-```
-
-### Data Not Found
-Check that data directories exist and contain `.npy` files:
-```bash
-ls MPAP_model_training/train_input/
-# Should show: fingerprints.npy, graph.npy, etc.
-```
 
 ## Performance
 
