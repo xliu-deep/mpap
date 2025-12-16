@@ -32,11 +32,23 @@ cd github
 ```bash
 # Using conda (recommended)
 conda env create -f environment.yaml
+# Verify the environment was created
+conda info --envs
+# Activate the environment
 conda activate kd
 
 # Or using pip
 pip install -r requirements.txt
 ```
+
+**Note:** 
+- The `environment.yaml` file is cross-platform compatible (Windows, macOS, Linux)
+- If you encounter package conflicts, you can use pip instead: `pip install -r requirements.txt`
+- For CUDA support, you may need to install PyTorch separately:
+  ```bash
+  # For CUDA 11.8 (check your CUDA version)
+  conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+  ```
 
 3. **Install the package in development mode:**
 ```bash
