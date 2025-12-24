@@ -250,5 +250,5 @@ Model performance metrics:
 
 ## Contact
 
-For questions or issues, please open an issue on GitHub or contact csxyllx@gmail.com.
+For questions or issues, please open an issue on GitHub or contact xianliu@rcees.ac.cn or csxyllx@gmail.com.
 
