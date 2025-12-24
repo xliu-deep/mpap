@@ -12,7 +12,17 @@ This project implements a multimodal Siamese neural network (MPAP) that predicts
 - **Graph-based structural features**: Extracted from atomic/bond descriptors
 - **Environmental parameters**: MP particle size and water environment type
 
+## Web Application
 
+Try the MPAP model online without installation:
+
+🌐 **Live Demo**: [http://mpap.envwind.site:8004/](http://mpap.envwind.site:8004/)
+
+The web application provides an interactive interface for:
+- Real-time predictions of adsorption coefficients (Kd)
+- Input via SMILES strings or file upload
+- Visualization of prediction results
+- No local installation required
 
 ## Installation
 
